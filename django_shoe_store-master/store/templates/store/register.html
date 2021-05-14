@@ -1,0 +1,36 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/register.css' %}">
+</head>
+<body>
+    <header>
+    <div class="wrapper">
+
+    </div>
+    </header>
+
+   <div class="container">
+    <form method='POST' action=''>
+        {% csrf_token %}
+        <h3>REGISTER</h3>
+        {{ form.username.label }}
+        {{form.username}}
+         {{ form.email.label }}
+        {{form.email}}
+         {{ form.password1.label}}
+        {{form.password1}}
+         {{ form.password2.label }}
+        {{form.password2}}
+
+        <button type="submit">Create user</button>
+        {{form.errors}}
+        <div class="footer1">already have an account?<a href="{% url 'login' %}">Login</a></div>
+    </form>
+</div>
+
+</body>
+</html>

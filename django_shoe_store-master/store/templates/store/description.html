@@ -1,0 +1,24 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+     <div class="row">
+		<div class="col-lg-3" style="margin-top: 100px; " >
+			<div class="box-element" id="form-wrapper">
+				<img class="thumbnail" src="{{queryset.imageURL}}">
+			</div>			
+		</div>
+
+		<div class="col-lg-6" style="margin-top: 100px">
+			<div class="box-element">
+				<p><strong> Name: </strong>{{queryset.name}}</p>
+				<p><strong> Price: </strong>{{queryset.price}}</p>
+				<p><strong> Size: </strong>{{queryset.size}}</p>
+				<p><strong> Gender: </strong>{{queryset.gender}}</p>
+				<p><strong> Description: </strong>{{queryset.description}}</p>
+				<p><strong> ShoeType: </strong>{{queryset.shoe_type}}</p>
+				
+			</div>				
+		</div>
+	</div>
+
+{% endblock content %}
